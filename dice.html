@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dice</title>
+	<link href="https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" rel="stylesheet">
+	 <script src="https://kit.fontawesome.com/15ba595f14.js" crossorigin="anonymous"></script>
+	<style type="text/css">
+
+		body{
+			background-color: whitesmoke;
+		}
+		#main{
+			width: 250px;
+			border-radius: 15px;
+			border: 2px solid black;
+			margin: 0 auto;
+			text-align: center;
+			font-family: 'Zilla Slab', serif;
+			font-size: 20px;
+			background: #336B32;
+
+		}
+
+		i{
+			font-size: 60px;
+			color:#061F36;
+		}
+
+		button{
+			padding: 10px;
+			font-size:25px;
+			outline: none;
+			color: white;
+			background: #061F36;
+			margin-bottom: 35px;
+			width: 100%;
+			border: none;
+			border-top: 2px solid white;
+			border-bottom: 2px solid white;
+		}
+
+		button:hover{
+			cursor: pointer;
+			font-weight: bold;
+		}
+
+		h1{
+			background: white;
+			width: 100%;
+			border-top: 2px solid black;
+			border-bottom: 2px solid black;
+			margin-bottom:40px;
+			color: #061F36;
+			
+		}
+
+		p{
+			font-size: 35px;
+			color: #EBD244;
+			font-weigt: 700;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div id="main">
+	<h1>Roll Dice</h1>
+	<i class="fas fa-dice-six"></i>
+	<i class="fas fa-dice-six"></i>
+	<p>You rolled:</p>
+	<p id="num">?</p>
+	<button>Throw Dice</button>
+</div>
+
+
+
+
+	<script type="text/javascript">
+
+		const num = document.getElementById("num");
+		const btn = document.querySelector("button");
+	
+		btn.addEventListener("click", function(){
+			roll();
+		});
+
+	function roll(){
+		let result = Math.floor(Math.random() * 12 + 1);
+		num.innerHTML = `${result}`;
+		}
+	</script>
+</body>
+</html>
+
